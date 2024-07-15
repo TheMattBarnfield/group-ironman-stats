@@ -29,7 +29,7 @@ const QuestTable: React.FC = () => {
         return <div>Loading...</div>
     }
 
-    const quests = Object.keys(playerData[0].quests).sort((a,b) => a.replaceAll("The ", "").localeCompare(b.replaceAll("The ", "")));
+    const quests = Object.keys(playerData[0].quests).sort((a,b) => a.replaceAll("The ", "").replaceAll("A ", "").localeCompare(b.replaceAll("The ", "").replaceAll("A ", "")));
 
     const tableRows = quests.map(quest => ({
         quest,
