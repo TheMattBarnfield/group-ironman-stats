@@ -19,6 +19,7 @@ td.skill-level {
 
 .highest {
     background-color: #8fc9a3;
+    color: darkslategrey;
 }
 
 @media (min-width: 800px) {
