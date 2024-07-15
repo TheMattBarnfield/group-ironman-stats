@@ -1,30 +1,20 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Player from '../models/player';
+import { PlayersContext } from '../PlayersContext';
 import Checkbox from './Checkbox';
 import CheckCell from './CheckCell';
 import CrossCell from './CrossCell';
 import './QuestTable.css'
 
-const PLAYER_NAMES = [
-    "Pale_Taupe",
-    "CitronZest"
-]
-
 const QuestTable: React.FC = () => {
-    const [playerData, setPlayerData] = useState<Player[]>([])
+    const playerData = useContext(PlayersContext);
     const [showCompleted, setShowCompleted] = useState<boolean>(true);
     const [showStarted, setShowStarted] = useState<boolean>(true);
     const [showUnstarted, setShowUnstarted] = useState<boolean>(true);
     const [activePlayer, setActivePlayer] = useState<string>("n/a");
 
-    useEffect(() => {(async () => {
-        const players = (await Promise.all(
-            PLAYER_NAMES.map(name => axios.get(`https://sync.runescape.wiki/runelite/player/${name}/STANDARD`))
-        )).map(response => response.data)
-
-        setPlayerData(players)
-    })()}, [])
+    
 
     if (!playerData.length) {
         return <div>Loading...</div>
@@ -52,7 +42,7 @@ const QuestTable: React.FC = () => {
                 Hide completed by: 
                 <select value={activePlayer} onChange={e => setActivePlayer(e.target.value)}>
                     <option value="n/a">n/a</option>
-                    {playerData.map(player => <option value={player.username}>{player.username.replaceAll("_", "")}</option>)}
+                    {playerData.map(player => <option value={player.username}>{player.username.replaceAll("_", " ")}</option>)}
                 </select>
             </label>
         </div>
