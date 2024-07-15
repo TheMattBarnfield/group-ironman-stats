@@ -22,7 +22,7 @@ const QuestTable: React.FC = () => {
         <table>
             <thead>
                 <tr>
-                    <td>Quest</td>
+                    <td>Skill</td>
                     {playerData.map(p => <td className="skill-level">{p.username.replaceAll("_", " ")}</td>)}
                 </tr>
             </thead>
