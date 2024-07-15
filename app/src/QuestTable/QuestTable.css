@@ -59,6 +59,20 @@ td.quest-completion {
     background-color: #d3d678;
 }
 
+select {
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid darkslategrey;
+    color: darkslategrey;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+select:focus {
+    outline: none;
+}
+
+
 @media (min-width: 800px) {
     #quest-list {
         padding: 0 1rem;

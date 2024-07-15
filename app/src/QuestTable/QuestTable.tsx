@@ -16,6 +16,7 @@ const QuestTable: React.FC = () => {
     const [showCompleted, setShowCompleted] = useState<boolean>(true);
     const [showStarted, setShowStarted] = useState<boolean>(true);
     const [showUnstarted, setShowUnstarted] = useState<boolean>(true);
+    const [activePlayer, setActivePlayer] = useState<string>("n/a");
 
     useEffect(() => {(async () => {
         const players = (await Promise.all(
@@ -38,12 +39,22 @@ const QuestTable: React.FC = () => {
     .filter(row => showCompleted || !row.completions.every(x=>x))
     .filter(row => showStarted || row.completions.every(x=>x) || !row.completions.some(x=>x))
     .filter(row => showUnstarted || row.completions.some(x=>x))
+    .filter(row => !(playerData.find(p => p.username == activePlayer)?.quests[row.quest] == 2))
 
     return <div id="quest-list">
         <div className="filters">
             <Checkbox label="Show completed" checked={showCompleted} onChange={() => setShowCompleted(v => !v)}/>
             <Checkbox label="Show started" checked={showStarted} onChange={() => setShowStarted(v => !v)}/>
             <Checkbox label="Show unstarted" checked={showUnstarted} onChange={() => setShowUnstarted(v => !v)}/>
+        </div>
+        <div className="filters">
+            <label>
+                Hide completed by: 
+                <select value={activePlayer} onChange={e => setActivePlayer(e.target.value)}>
+                    <option value="n/a">n/a</option>
+                    {playerData.map(player => <option value={player.username}>{player.username.replaceAll("_", "")}</option>)}
+                </select>
+            </label>
         </div>
         <table>
             <thead>
