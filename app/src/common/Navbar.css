@@ -7,18 +7,10 @@ nav {
     align-items: center;
 }
 
-
-
 a:hover {
     color: rgb(134, 145, 39);
 }
 
 .icon {
     height: 2rem;
-}
-
-@media (min-width: 800px) {
-    nav {
-        
-    }
 }

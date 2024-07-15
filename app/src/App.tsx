@@ -12,7 +12,8 @@ import { SlowBuffer } from 'buffer';
 
 const PLAYER_NAMES = [
   "Pale_Taupe",
-  "CitronZest"
+  "CitronZest",
+  "OvertlyOlive"
 ]
 
 function App() {
