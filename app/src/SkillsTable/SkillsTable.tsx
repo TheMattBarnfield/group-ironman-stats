@@ -1,6 +1,4 @@
-import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react'
-import Player from '../models/player';
+import React, { useContext } from 'react'
 import { PlayersContext } from '../PlayersContext';
 import './SkillsTable.css'
 
@@ -15,7 +13,7 @@ const QuestTable: React.FC = () => {
 
     const tableRows = skills.map(skill => ({
         skill,
-        levels: playerData.map(p => p.levels[skill])
+        levels: playerData.map(p => p.levels[skill]),
     }))
 
     return <div id="skills-list">
@@ -29,7 +27,7 @@ const QuestTable: React.FC = () => {
             <tbody>
                 {tableRows.map(row => (<tr>
                     <td className="skill-name">{row.skill}</td>
-                    {row.levels.map(l => <td className="skill-level">{l}</td>)}
+                    {row.levels.map(l => <td className={row.levels.every(l2 => l >= l2) ? "highest skill-level" : "skill-level"}>{l}</td>)}
                 </tr>))}
             </tbody>
         </table>

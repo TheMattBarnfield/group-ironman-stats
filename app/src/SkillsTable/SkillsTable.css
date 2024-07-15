@@ -17,6 +17,10 @@ td.skill-level {
     overflow: hidden;
 }
 
+.highest {
+    background-color: #8fc9a3;
+}
+
 @media (min-width: 800px) {
     #skills-list {
         padding: 1rem;
