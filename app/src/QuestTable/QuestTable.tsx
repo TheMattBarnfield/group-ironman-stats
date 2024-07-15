@@ -34,8 +34,8 @@ const QuestTable: React.FC = () => {
     return <div id="quest-list">
         <div className="filters">
             <Checkbox label="Show completed" checked={showCompleted} onChange={() => setShowCompleted(v => !v)}/>
-            <Checkbox label="Show started" checked={showStarted} onChange={() => setShowStarted(v => !v)}/>
-            <Checkbox label="Show unstarted" checked={showUnstarted} onChange={() => setShowUnstarted(v => !v)}/>
+            <Checkbox label="Show partially completed" checked={showStarted} onChange={() => setShowStarted(v => !v)}/>
+            <Checkbox label="Show uncompleted" checked={showUnstarted} onChange={() => setShowUnstarted(v => !v)}/>
         </div>
         <div className="filters">
             <label>

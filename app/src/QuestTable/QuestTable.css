@@ -1,7 +1,3 @@
-table {
-    border-collapse: collapse;
-}
-
 #quest-list {
     margin: auto;
     display: flex;
@@ -16,33 +12,11 @@ table {
     justify-content: space-evenly;
 }
 
-td {
-    padding: 1rem;
-    line-height: 2rem;
-}
-
 .quest-name {
     max-width: 10rem;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-}
-
-thead tr {
-    background-color: darkslategrey;
-    color: #dddddd;
-    position: sticky;
-    top: 0;
-}
-
-tbody tr {
-    background-color: #dddddd;
-    transition: all 0.1s ease;
-}
-
-tbody tr:hover {
-    background-color: darkslategrey;
-    color: #dddddd
 }
 
 td.quest-completion {

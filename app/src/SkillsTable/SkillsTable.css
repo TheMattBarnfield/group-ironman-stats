@@ -1,0 +1,24 @@
+#skills-list {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+td.skill-level {
+    text-align: center;
+    width: 5rem;
+    white-space: nowrap;
+}
+
+.skill-name {
+    max-width: 10rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media (min-width: 800px) {
+    #skills-list {
+        padding: 1rem;
+    }
+}
