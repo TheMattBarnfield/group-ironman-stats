@@ -6,12 +6,13 @@ table {
     margin: auto;
     display: flex;
     flex-direction: column;
-    padding: 0 1rem;
 }
 
 .filters {
     display: flex;
+    flex-direction: column;
     padding: 1rem;
+    gap: 1rem;
     justify-content: space-evenly;
 }
 
@@ -21,7 +22,7 @@ td {
 }
 
 .quest-name {
-    max-width: 15rem;
+    max-width: 10rem;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -29,7 +30,9 @@ td {
 
 thead tr {
     background-color: darkslategrey;
-    color: #dddddd
+    color: #dddddd;
+    position: sticky;
+    top: 0;
 }
 
 tbody tr {
@@ -54,4 +57,15 @@ td.quest-completion {
 
 .started-row {
     background-color: #d3d678;
+}
+
+@media (min-width: 800px) {
+    #quest-list {
+        padding: 0 1rem;
+    }
+
+    .filters {
+        padding: 1rem;
+        flex-direction: row;
+    }
 }
