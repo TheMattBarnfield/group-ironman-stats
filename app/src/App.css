@@ -1,0 +1,19 @@
+body {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: darkslategrey;
+    background-color: darkslategrey;
+    margin: 0;
+}
+
+#root {
+    background-color: darkslategrey;
+    padding: 0;
+}
+
+main {
+    background-color: white;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    min-height: 100vh;
+}

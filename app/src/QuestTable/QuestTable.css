@@ -1,0 +1,57 @@
+table {
+    border-collapse: collapse;
+}
+
+#quest-list {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+.filters {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+
+td {
+    padding: 1rem;
+    line-height: 2rem;
+}
+
+.quest-name {
+    max-width: 15rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+thead tr {
+    background-color: darkslategrey;
+    color: #dddddd
+}
+
+tbody tr {
+    background-color: #dddddd;
+    transition: all 0.1s ease;
+}
+
+tbody tr:hover {
+    background-color: darkslategrey;
+    color: #dddddd
+}
+
+td.quest-completion {
+    text-align: center;
+    width: 5rem;
+    white-space: nowrap;
+}
+
+.complete-row {
+    background-color: #8fc9a3;
+}
+
+.started-row {
+    background-color: #d3d678;
+}
