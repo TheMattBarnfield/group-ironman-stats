@@ -32,7 +32,7 @@ function App() {
 
   return (
     <PlayersContext.Provider value={playerData}>
-      <BrowserRouter>
+      <BrowserRouter basename='group-ironman-stats'>
         <Navbar />
         <main>
           <Routes>
