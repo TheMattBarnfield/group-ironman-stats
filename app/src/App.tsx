@@ -13,7 +13,8 @@ import { SlowBuffer } from 'buffer';
 const PLAYER_NAMES = [
   "Pale_Taupe",
   "CitronZest",
-  "OvertlyOlive"
+  "OvertlyOlive",
+  "Plum Custard"
 ]
 
 function App() {
@@ -28,7 +29,15 @@ function App() {
   })()}, [])
 
   const Home = () => (
-    <div style={{padding: '1rem'}}>Welcome to the home of the Dulux Samples. Probably the greatest Hardcore Group Ironman ever made.</div>
+    <div style={{padding: '1rem'}}>
+      <h1>Dulux samples</h1>
+      <p>Welcome to the home of the Dulux Samples. Probably the greatest Hardcore Group Ironman ever made.</p>
+      <h2>Deaths</h2>
+      <ol>
+        <li>Plum Custard was brutally massacred by a Hobgoblin in Zeah.</li>
+        <li>Plum Custard was sniped at the wildy lever by Ximoua.</li>
+      </ol>
+    </div>
   )
 
   return (

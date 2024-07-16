@@ -22,7 +22,7 @@ td.skill-level {
     color: darkslategrey;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
     #skills-list {
         padding: 1rem;
     }

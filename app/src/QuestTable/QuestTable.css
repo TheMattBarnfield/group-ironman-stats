@@ -47,7 +47,7 @@ select:focus {
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
     #quest-list {
         padding: 0 1rem;
     }
