@@ -36,6 +36,7 @@ function App() {
       <ol>
         <li>Plum Custard was brutally massacred by a Hobgoblin in Zeah.</li>
         <li>Plum Custard was sniped at the wildy lever by Ximoua.</li>
+        <li>OvertlyOlive followed a terrible tutorial on how to safespot a Troll General by Pale Taupe, leading to being killed in one hit by a 29.</li>
       </ol>
     </div>
   )
