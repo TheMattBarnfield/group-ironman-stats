@@ -39,10 +39,10 @@ function App() {
         <li>OvertlyOlive followed a terrible tutorial on how to safespot a Troll General by Pale Taupe, leading to being killed in one hit by a 29.</li>
       </ol>
       <h2>Notable drops</h2>
-      <ol>
-        <li>Pale Taupe is feeling more secure with his emotional support Imcando Hammer</li>
-        <li>OvertlyOlive is looking suave in his new mole slippers</li>
-      </ol>
+      <ul>
+        <li>Pale Taupe is feeling more secure with his emotional support Imcando Hammer.</li>
+        <li>OvertlyOlive is looking suave in his new mole slippers.</li>
+      </ul>
     </div>
   )
 
